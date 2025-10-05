@@ -1,0 +1,53 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: ;
+}
+
+/* Links
+--------------------------------------------- */
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #d1746d;
+}
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+
+.site-wrapper {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+/* Header */
+
+/* Main
+--------------------------------------------- */
+/* Site Hero  */
+
+/* Aboout */
+
+/* portfolio */
+
+/* aside */
+
+/* Footer
+--------------------------------------------- */
