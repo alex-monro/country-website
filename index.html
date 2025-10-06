@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home - hisui-region</title>
     <!-- favicon -->
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,10 +13,28 @@
       href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Catamaran:wght@100..900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Spinnaker&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://db.onlinewebfonts.com/c/89b94e3a0ac085875bf7972d0936e11c?family=KyoMadoka"
+      rel="stylesheet"
+    />
 
     <!-- Css -->
-    <link rel="stylesheet" href="styles/normalize-fwd.css" />
-    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="css/normalize-fwd.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+      @media (max-width: 600px) {
+        .mobile-banner {
+          display: block;
+          width: 100%;
+          max-width: 100vw;
+        }
+      }
+      @media (min-width: 601px) {
+        .mobile-banner {
+          display: none;
+        }
+      }
+    </style>
 
     <!-- Scripts 
       Used the example on the day 4 assigment "navigation.js" to help my header-->
@@ -25,7 +44,9 @@
   <body>
     <div class="site-wrapper">
       <header class="site-header">
-        <a href="index.html" class="site-name">AM</a>
+        <a href="index.html" class="site-name"
+          ><img src="images/logo.svg" alt=""
+        /></a>
 
         <nav class="site-navigation" id="site-navigation">
           <button
@@ -48,14 +69,62 @@
           </button>
 
           <ul class="nav-menu" id="header-menu">
-            <li><a href="#about">Locations</a></li>
-            <li><a href="#portfolio">Pokemon</a></li>
-            <li><a href="#contact">Credits</a></li>
+            <li><a href="locations.html">Locations</a></li>
+            <li><a href="pokemon.html">Pokemon</a></li>
+            <li><a href="credits.html">Credits</a></li>
           </ul>
         </nav>
       </header>
 
-      <main></main>
+      <main>
+        <section class="hero">
+          <picture>
+            <source
+              media="(max-width: 50rem)"
+              srcset="
+                images/11681-1080x1920-mobile-full-hd-pokemon-legends-arceus-wallpaper.jpg
+              "
+            />
+            <img
+              src="images/key-artwork.jpg"
+              alt="Hisui Region Banner"
+              class="hero-img"
+            />
+          </picture>
+          <div class="hero-text">
+            <h1 class="">Hisui Region</h1>
+          </div>
+        </section>
+
+        <section class="welcome">
+          <h2>Welcome to the Hisui Region</h2>
+          <p>
+            The Hisui region is a vast and diverse land filled with breathtaking
+            landscapes, rich history, and a wide variety of Pokémon species. As
+            the setting for Pokémon Legends: Arceus, Hisui offers players an
+            immersive experience that combines exploration, adventure, and
+            discovery.
+          </p>
+        </section>
+        <section class="explore">
+          <h2>Explore the Region</h2>
+          <div class="explore-cards">
+            <a href="locations.html">
+              <h3>Locations</h3>
+              <img src="images/pla-hisui-region.jpg" alt="region map" />
+            </a>
+
+            <a href="pokemon.html">
+              <h3>Pokemon</h3>
+              <img src="images/hisui-pokemon.webp" alt="pokemon database" />
+            </a>
+            <a href="credits.html">
+              <h3>credits</h3>
+              <img src="images/credits.jpg" alt="credits" />
+            </a>
+          </div>
+        </section>
+      </main>
     </div>
   </body>
 </html>

@@ -2,6 +2,12 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  font-family: "Barlow", sans-serif;
+  color: black;
+  font-size: 1.2rem;
+
+  background-color: #fafafa;
+  background-image: url('data:image/svg+xml,<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="20" fill="%23fafafa"/><circle cx="1" cy="1" r="1" fill="%23e0e0e0"/></svg>');
 }
 
 h1,
@@ -10,14 +16,15 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: ;
+  font-family: "KyoMadoka";
+  font-size: 2rem;
 }
 
 /* Links
 --------------------------------------------- */
 a {
   text-decoration: none;
-  color: #000000;
+  color: black;
 }
 
 a:visited {
@@ -38,14 +45,137 @@ a:hover {
 }
 
 /* Header */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: transparent;
+  z-index: 10;
+  max-width: 120rem;
+}
+
+.site-name {
+  height: 5rem;
+  width: 5rem;
+  padding-top: 1rem;
+}
+.site-navigation {
+  justify-content: space-between;
+  padding-right: 1rem;
+}
+.site-navigation ul {
+  list-style: none;
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+
+  text-align: center;
+  margin: 0 auto;
+}
+
+.site-navigation a {
+  display: block;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.menu-toggle {
+  display: block;
+  background-color: transparent;
+  border: 0;
+}
+
+.site-navigation.toggled ul {
+  display: block;
+}
+
+@media screen and (min-width: 50rem) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .site-navigation ul {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    gap: 1.5rem;
+  }
+
+  .site-navigation a {
+    padding: 0;
+  }
+}
 
 /* Main
 --------------------------------------------- */
 /* Site Hero  */
+.hero {
+  position: relative;
+}
+.hero-text {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
 
-/* Aboout */
+  object-fit: cover;
+}
 
-/* portfolio */
+.hero-text h1 {
+  font-size: 3rem;
+  text-shadow: 0 2px 8px rgb(0, 0, 0);
+  white-space: nowrap;
+}
+.hero-img {
+  object-fit: cover;
+}
+
+.welcome {
+  text-align: center;
+  padding: 1rem;
+}
+
+/* explore */
+
+.explore {
+  text-align: center;
+  padding: 1rem;
+  justify-content: center;
+}
+.explore-cards {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  flex-direction: column;
+  max-width: 40rem;
+}
+
+.explore-cards a {
+  display: block;
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  gap: 1rem;
+  border-radius: 1rem;
+}
+@media screen and (min-width: 50rem) {
+  .explore-cards {
+    margin: 0 auto;
+    flex-direction: row;
+    max-width: 80rem;
+  }
+}
 
 /* aside */
 
