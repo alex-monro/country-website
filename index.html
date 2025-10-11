@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Catamaran:wght@100..900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Spinnaker&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Catamaran:wght@100..900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:wght@700;800;900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Spinnaker&display=swap"
       rel="stylesheet"
     />
     <link
@@ -36,8 +36,7 @@
       }
     </style>
 
-    <!-- Scripts 
-      Used the example on the day 4 assigment "navigation.js" to help my header-->
+    <!-- Scripts -->
     <script src="scripts/navigation.js" defer></script>
   </head>
 
@@ -45,7 +44,7 @@
     <div class="site-wrapper">
       <header class="site-header">
         <a href="index.html" class="site-name"
-          ><img src="images/logo.svg" alt=""
+          ><img src="" alt=""
         /></a>
 
         <nav class="site-navigation" id="site-navigation">
@@ -86,44 +85,48 @@
               "
             />
             <img
-              src="images/key-artwork.jpg"
+              src="images/pla-hisui-region.jpg"
               alt="Hisui Region Banner"
               class="hero-img"
             />
           </picture>
-          <div class="hero-text">
-            <h1 class="">Hisui Region</h1>
+          
+          <!-- Gradient overlay for better text contrast -->
+          <div class="hero-overlay"></div>
+          
+          <!-- Improved hero content with subtitle and CTAs -->
+          <div class="hero-content">
+            <h1 class="hero-title">Hisui Region</h1>
+           
+            </div>
           </div>
         </section>
 
-        <section class="welcome">
-          <h2>Welcome to the Hisui Region</h2>
-          <p>
-            The Hisui region is a vast and diverse land filled with breathtaking
-            landscapes, rich history, and a wide variety of Pokémon species. As
-            the setting for Pokémon Legends: Arceus, Hisui offers players an
-            immersive experience that combines exploration, adventure, and
-            discovery.
-          </p>
-        </section>
-        <section class="explore">
+
+        <section class="card-section">
           <h2>Explore the Region</h2>
-          <div class="explore-cards">
-            <a href="locations.html">
-              <h3>Locations</h3>
-              <img src="images/pla-hisui-region.jpg" alt="region map" />
-            </a>
+          <div class="card-container">
+      <a href="locations.html" class="explore-card" id="locations-card">
+  <h3>Locations</h3>
+  <img src="images/firespit.png" alt="region map"/>
+</a>
 
-            <a href="pokemon.html">
-              <h3>Pokemon</h3>
-              <img src="images/hisui-pokemon.webp" alt="pokemon database" />
-            </a>
-            <a href="credits.html">
-              <h3>credits</h3>
-              <img src="images/credits.jpg" alt="credits" />
+<a href="pokemon.html" class="explore-card" id="pokemon-card">
+  <h3>Pokemon</h3>
+  <img src="images/Ancient_Retreat_LA_Concept_Art.png" alt="pokemon database"/>
+</a>
+
+<a href="credits.html" class="explore-card" id="credits-card">
+  <h3>Credits</h3>
+  <img src="images/LegendsJubilifeVillageCEDEC.png" alt="credits"/>
+</a>
             </a>
           </div>
         </section>
+
+        <footer class="site-footer">
+          <p>&copy; 2024 Hisui Region. For Educational Purpases Only.</p>
+          </footer>
       </main>
     </div>
   </body>
