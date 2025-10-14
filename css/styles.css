@@ -1,143 +1,106 @@
+/* ===================================
+   BASE STYLES
+   =================================== */
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Barlow", sans-serif;
-  color: #1a1a1a;
-  font-size: 1.2rem;
-  background-color: #f5f9f0;
+  font-family: "Roboto", sans-serif;
+  color: #01003d;
 }
+
+/* ===================================
+   TYPOGRAPHY
+   =================================== */
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "KyoMadoka", sans-serif;
+  color: #01003d;
 }
+
 h1 {
-  font-size: 10rem;
-  text-transform: uppercase;
-  text-emphasis: underline;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 5rem;
+  letter-spacing: 0.1rem;
+  color: white;
 }
 
-h2 {
-  font-size: 3rem;
-}
-
+h2,
 h3 {
-  font-size: 1.8rem;
-  text-transform: uppercase;
+  font-family: "Bebas Neue", sans-serif;
+  line-height: 1rem;
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
 }
 
-/* Links
---------------------------------------------- */
+/* ===================================
+   LINKS
+   =================================== */
+
 a {
   text-decoration: none;
-  color: #1a1a1a;
+  color: var(--color-primary);
 }
 
-a:visited {
-  color: #1a1a1a;
-}
-
-a:hover {
-  color: #8b0900;
-}
-
-/*--------------------------------------------------------------
-# Layout
---------------------------------------------------------------*/
+/* ===================================
+   LAYOUT
+   =================================== */
 
 .site-wrapper {
   max-width: 120rem;
   margin: 0 auto;
 }
 
-/* Header
---------------------------------------------- */
+/* ===================================
+   HEADER & NAVIGATION
+   =================================== */
+
 .site-header {
-  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background: linear-gradient(
-    180deg,
-    rgb(0, 0, 0) 0%,
-    rgb(0, 0, 0) 100%
-  ); */
-  z-index: 10000000000000;
-  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  z-index: 1000;
+  background-color: #ffffff;
+  border-bottom: solid 3px #01003d;
+  font-size: ;
 }
 
 .site-name {
-  width: 5rem;
-  height: 5rem;
-  object-fit: contain;
-  display: block;
-  filter: brightness(0) invert(.); /* Pure white */
-  opacity: 0.95;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
-.site-name:hover {
-  transform: scale(1.05);
-}
-
-.site-navigation {
-  justify-content: space-between;
-}
-
+/* Navigation */
 .site-navigation ul {
   list-style: none;
   display: none;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 100%;
-  text-align: center;
-  margin: 0;
-  padding: 1rem 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .site-navigation a {
-  display: block;
-  padding: 1rem;
-  font-size: 1.3rem;
-  font-weight: 600;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: white;
-}
-
-.site-navigation a:hover {
-  color: #c99b1e;
-}
-
-.menu-toggle {
-  display: block;
-  background-color: transparent;
-  border: 0;
-  cursor: pointer;
-  padding: 0.5rem;
-  transition: transform 0.3s ease;
-}
-
-.menu-toggle:hover {
-  transform: scale(1.1);
-}
-
-.menu-toggle svg {
-  fill: white;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
 }
 
 .site-navigation.toggled ul {
   display: block;
+}
+
+.menu-toggle {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.menu-toggle svg {
+  fill: var(--color-white);
 }
 
 @media screen and (min-width: 50rem) {
@@ -147,168 +110,212 @@ a:hover {
 
   .site-navigation ul {
     display: flex;
-    flex-direction: row;
-    position: static;
     gap: 2rem;
-    box-shadow: none;
-    padding: 0;
-  }
-
-  .site-navigation a {
-    padding: 0;
-  }
-
-  .site-header {
-    padding: 1.5rem 3rem;
   }
 }
 
-/* Hero Section
---------------------------------------------- */
+/* ===================================
+   HOME PAGE - Hero
+   =================================== */
+
 .hero {
-  position: relative;
-  height: 100vh;
-  display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.hero-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+.hero {
+  height: 100vh;
 }
 
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  background: radial-gradient(
-    ellipse at center,
-    rgba(0, 0, 0, 0.479) 0%,
-    rgba(0, 0, 0, 0.384) 100%
-  );
-  z-index: 1;
-}
-
-/* Hero content container */
-.hero-content {
+.hero img {
   position: relative;
-  z-index: 2;
-  text-align: center;
-  max-width: 50rem;
-  padding: 2rem;
-  margin-top: -3rem;
-  text-align: center;
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
 }
 
-.hero-title {
-  font-weight: 100;
-  color: #ffffff;
-
-  margin-bottom: 1rem;
-  letter-spacing: 2px;
-  line-height: 1.1;
-}
-
-.welcome {
-  padding: 2rem;
+.hero h1 {
+  position: absolute;
   text-align: center;
-  max-width: 40rem;
-  margin: 0 auto;
+  top: 40%;
+  width: 100%;
 }
 
-/* Explore Section
---------------------------------------------- */
+/* ===================================
+   HOME PAGE - Card Section
+   =================================== */
+
 .card-section {
   text-align: center;
+  padding: 2rem;
 }
 
-.card-section h2 {
-  color: #000000;
-  margin-bottom: 3rem;
-}
 .card-container {
   display: grid;
   gap: 2rem;
   padding: 2rem;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(280px, max-content));
 }
-.card-container img {
-  width: 25rem;
-  height: 15rem;
-  object-fit: cover;
+
+.card-container {
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 25rem));
+}
+.card-container a {
+  border-radius: 0.2rem;
   overflow: hidden;
   display: block;
 }
-.explore-card {
-  color: #2c2c2c;
-  border-radius: 1.5rem;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  position: relative;
+.card-container img {
+  display: block;
   object-fit: cover;
-  background-color: #9a6b6b;
-  color: white;
-  overflow: hidden;
 }
-.explore-card h3 {
-  padding: 1.5rem;
+
+.card-container h3 {
+  padding: 2rem;
   margin: 0;
-
-  letter-spacing: 0.1rem;
-  font-size: 1.6rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  z-index: 2;
+  color: #d4e6ee;
+  background-color: #03233a;
 }
 
-#locations-card {
-  transform: rotate(-2deg);
+/* ===================================
+    Page Hero -- ALL SECTIONS
+   =================================== */
+
+.page-hero {
+  position: relative;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d4e6ee;
 }
 
-#pokemon-card {
-  transform: rotate(1deg);
-}
-
-#credits-card {
-  transform: rotate(+1deg);
-}
-
-.explore-card::before {
-  content: "";
+.page-hero h2 {
   position: absolute;
-  top: 8px;
-  left: 8px;
-  right: 8px;
-  bottom: 8px;
-  border: 2px solid #d4e8cc;
-  border-radius: 1rem;
-  pointer-events: none;
-  z-index: 1;
+  z-index: 100;
+  font-size: 2.5rem;
 }
-#locations-card:hover,
-#pokemon-card:hover,
-#credits-card:hover {
-  transform: rotate(0deg) translateY(-15px) scale(1.02);
+/* ===================================
+   WILDLIFE SECTION - MOBILE FIRST
+   =================================== */
+.wildlife-section {
+  padding: 4rem 2rem;
+  max-width: 75rem;
+  margin: 0 auto;
+  display: grid;
+  gap: 5rem;
 }
+
+.featured-wrapper {
+  display: grid;
+  gap: 4rem;
+  padding-bottom: 4rem;
+  border-bottom: 2px solid #d4e6ee;
+}
+
+.featured-wrapper video {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+.featured-text {
+}
+
+.featured-text h3 {
+  margin: 0 0 1rem;
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+}
+
+.featured-text p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #01003d;
+}
+
+.wildlife-card {
+  display: grid;
+  gap: 1rem;
+}
+
+.wildlife-card img {
+  width: 100%;
+  height: 17.5rem;
+  object-fit: cover;
+  display: block;
+}
+
+.wildlife-card h3 {
+  font-size: 2rem;
+}
+
+.wildlife-card p {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* ===================================
+   DESKTOP (768px+)
+   =================================== */
+@media screen and (min-width: 768px) {
+  .page-hero h2 {
+    font-size: 4rem;
+  }
+
+  .wildlife-section {
+    gap: 3rem;
+  }
+
+  .featured-wrapper {
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .featured-wrapper video {
+    height: 350px;
+  }
+
+  .featured-text h3 {
+    font-size: 3rem;
+  }
+
+  .featured-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  .wildlife-card {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    direction: rtl;
+  }
+
+  .wildlife-card > * {
+    direction: ltr;
+  }
+  .wildlife-card.reverse {
+    direction: ltr;
+  }
+  .wildlife-card img {
+    height: 350px;
+  }
+
+  .wildlife-card h3 {
+    font-size: 2.5rem;
+  }
+}
+
+/* ===================================
+   FOOTER
+   =================================== */
 
 .site-footer {
-  background-color: #ffffff;
-  color: #ecf0f1;
+  background-color: #03233a;
+  color: #f6fbfc;
   text-align: center;
-  padding: 20px 0;
-  margin-top: 40px;
-  font-size: 14px;
-}
-
-.site-footer p {
-  margin: 0;
-  font-family: Arial, sans-serif;
+  padding: 3rem;
 }
