@@ -1,7 +1,3 @@
-/* ===================================
-   BASE STYLES
-   =================================== */
-
 html {
   scroll-behavior: smooth;
 }
@@ -34,9 +30,9 @@ h1 {
 h2,
 h3 {
   font-family: "Bebas Neue", sans-serif;
-  line-height: 1rem;
   font-size: 2rem;
   letter-spacing: 0.3rem;
+  color: #01003d;
 }
 
 /* ===================================
@@ -71,8 +67,7 @@ a {
   padding: 1.5rem 2rem;
   z-index: 1000;
   background-color: #ffffff;
-  border-bottom: solid 3px #01003d;
-  font-size: ;
+  border-bottom: solid 0.1875rem #01003d;
 }
 
 .site-name {
@@ -196,10 +191,12 @@ a {
   z-index: 100;
   font-size: 2.5rem;
 }
+
 /* ===================================
-   WILDLIFE SECTION - MOBILE FIRST
+   CONTENT SECTION - MOBILE FIRST (Wildlife & Geography)
    =================================== */
-.wildlife-section {
+
+.content-section {
   padding: 4rem 2rem;
   max-width: 75rem;
   margin: 0 auto;
@@ -211,15 +208,17 @@ a {
   display: grid;
   gap: 4rem;
   padding-bottom: 4rem;
-  border-bottom: 2px solid #d4e6ee;
+  border-bottom: 0.125rem solid #d4e6ee;
 }
 
-.featured-wrapper video {
+.featured-wrapper video,
+.featured-wrapper img {
   width: 100%;
-  height: 280px;
+  height: 17.5rem;
   object-fit: cover;
   display: block;
 }
+
 .featured-text {
 }
 
@@ -235,36 +234,37 @@ a {
   color: #01003d;
 }
 
-.wildlife-card {
+.content-card {
   display: grid;
   gap: 1rem;
 }
 
-.wildlife-card img {
+.content-card img {
   width: 100%;
   height: 17.5rem;
   object-fit: cover;
   display: block;
 }
 
-.wildlife-card h3 {
+.content-card h3 {
   font-size: 2rem;
 }
 
-.wildlife-card p {
+.content-card p {
   font-size: 1rem;
   line-height: 1.7;
 }
 
 /* ===================================
-   DESKTOP (768px+)
+   CONTENT SECTION - DESKTOP
    =================================== */
-@media screen and (min-width: 768px) {
+
+@media screen and (min-width: 48rem) {
   .page-hero h2 {
     font-size: 4rem;
   }
 
-  .wildlife-section {
+  .content-section {
     gap: 3rem;
   }
 
@@ -274,8 +274,9 @@ a {
     align-items: center;
   }
 
-  .featured-wrapper video {
-    height: 350px;
+  .featured-wrapper video,
+  .featured-wrapper img {
+    height: 21.875rem;
   }
 
   .featured-text h3 {
@@ -287,26 +288,90 @@ a {
     line-height: 1.8;
   }
 
-  .wildlife-card {
+  .content-card {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
     direction: rtl;
   }
 
-  .wildlife-card > * {
+  .content-card > * {
     direction: ltr;
-  }
-  .wildlife-card.reverse {
-    direction: ltr;
-  }
-  .wildlife-card img {
-    height: 350px;
   }
 
-  .wildlife-card h3 {
+  .content-card.reverse {
+    direction: ltr;
+  }
+
+  .content-card img {
+    height: 21.875rem;
+  }
+
+  .content-card h3 {
     font-size: 2.5rem;
   }
+}
+
+/* ===================================
+   CREDITS PAGE - TABLE
+   =================================== */
+
+.credits-intro,
+.credits-footer {
+  text-align: left;
+  max-width: 75rem;
+  margin: 0 auto 3rem;
+}
+
+.credits-intro h3,
+.credits-footer h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.credits-intro p,
+.credits-footer p {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.credits-table {
+  width: 100%;
+  max-width: 75rem;
+  margin: 0 auto 3rem;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.credits-table thead {
+  background-color: #01003d;
+  color: #ffffff;
+}
+
+.credits-table th,
+.credits-table td {
+  padding: 1rem;
+  border: 0.0625rem solid #d4e6ee;
+}
+
+.credits-table th {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+}
+
+.credits-table td {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.credits-table a {
+  color: #01003d;
+  text-decoration: underline;
+}
+
+.credits-table a:hover {
+  color: #03233a;
 }
 
 /* ===================================

@@ -4,27 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Geography - Antarctica</title>
-    <meta name="description" content="Explore Antarctica's geography including ice sheets, mountains, climate, and the unique landscape of Earth's southernmost continent.">
-    
-    <!-- favicon -->
+    <meta
+      name="description"
+      content="Explore the frozen continent of Antarctica - its geography, ice sheets, and extreme climate."
+    />
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- Css -->
     <link rel="stylesheet" href="css/normalize-fwd.css" />
     <link rel="stylesheet" href="css/styles.css" />
 
-    <!-- Scripts -->
     <script src="scripts/navigation.js" defer></script>
   </head>
 
-  <body>
+  <body class="geography">
     <div class="site-wrapper">
       <header class="site-header">
         <a href="index.html" class="site-name">ANTARCTICA</a>
@@ -50,7 +52,6 @@
           </button>
 
           <ul class="nav-menu" id="header-menu">
-            <li><a href="index.html">Home</a></li>
             <li><a href="wildlife.html">Wildlife</a></li>
             <li><a href="geography.html">Geography</a></li>
             <li><a href="research.html">Research</a></li>
@@ -61,38 +62,77 @@
 
       <main>
         <section class="page-hero">
-          <h1>Geography of Antarctica</h1>
+          <h2>Geography of Antarctica</h2>
         </section>
 
         <section class="content-section">
-          <h2>The Frozen Continent</h2>
-          <p>Antarctica is Earth's southernmost continent, containing the geographic South Pole. Add more content from Wikipedia here.</p>
-          
-          <img src="images/geography-1.jpg" alt="Antarctic landscape">
-        </section>
+          <!-- Featured wrapper -->
+          <div class="featured-wrapper">
+            <img src="images/frozen-continent.jpg" alt="Antarctic landscape" />
+            <div class="featured-text">
+              <h3>The Frozen Continent</h3>
+              <p>
+                Antarctica is Earth's southernmost continent, a vast frozen
+                wilderness covering 14 million square kilometers. Almost
+                entirely covered by ice sheets up to 4.8 kilometers thick, it
+                contains 90% of the world's ice and 70% of its fresh water.
+              </p>
+              <blockquote cite="https://example.com">
+                <p>
+                  "Antarctica is a natural reserve, devoted to peace and
+                  science."
+                </p>
+                <footer>— Antarctic Treaty, 1959</footer>
+              </blockquote>
+            </div>
+          </div>
 
-        <!-- BLOCKQUOTE -->
-        <section class="content-section">
-          <blockquote cite="https://example.com">
-            <p>"Antarctica is a natural reserve, devoted to peace and science."</p>
-            <footer>— Antarctic Treaty, 1959</footer>
-          </blockquote>
-        </section>
+          <!-- Ice Sheets card -->
+          <article class="content-card">
+            <img src="images/glaciers.jpg" alt="Ice sheets and glaciers" />
+            <div>
+              <h3>Ice Sheets and Glaciers</h3>
+              <p>
+                The Antarctic ice sheet is the largest single mass of ice on
+                Earth, containing about 26.5 million cubic kilometers of ice.
+                Massive glaciers flow slowly from the interior toward the coast,
+                creating dramatic ice shelves and icebergs that can be larger
+                than countries.
+              </p>
+            </div>
+          </article>
 
-        <section class="content-section">
-          <h2>Ice Sheets and Glaciers</h2>
-          <p>Add content about ice sheets here from Wikipedia.</p>
-          <img src="images/glaciers.jpg" alt="Antarctic glaciers">
-        </section>
+          <!-- Climate card -->
+          <article class="content-card reverse">
+            <img
+              src="images/extreme-climates.jpg"
+              alt="Extreme Antarctic climate"
+            />
+            <div>
+              <h3>Extreme Climate</h3>
+              <p>
+                Antarctica holds the record for the coldest temperature ever
+                recorded on Earth: -89.2°C. Fierce katabatic winds can reach
+                speeds over 300 km/h, making it the windiest continent. Despite
+                all this ice, it's technically the world's largest desert.
+              </p>
+            </div>
+          </article>
 
-        <section class="content-section">
-          <h2>Climate</h2>
-          <p>Add content about climate here from Wikipedia.</p>
-        </section>
-
-        <section class="content-section">
-          <h2>Mountains and Valleys</h2>
-          <p>Add content about mountains here from Wikipedia.</p>
+          <!-- Mountains card -->
+          <article class="content-card">
+            <img src="images/mountains.jpg" alt="Antarctic mountains" />
+            <div>
+              <h3>Mountains and Valleys</h3>
+              <p>
+                Beneath the ice lie dramatic mountain ranges, including the
+                Transantarctic Mountains that divide the continent. Mount Vinson
+                rises 4,892 meters above sea level, making it Antarctica's
+                highest peak. Hidden valleys and subglacial lakes exist beneath
+                kilometers of ice.
+              </p>
+            </div>
+          </article>
         </section>
 
         <footer class="site-footer">
