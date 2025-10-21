@@ -74,10 +74,6 @@ a {
   border-bottom: none;
 }
 
-.home .site-name {
-  color: #ffffff;
-}
-
 .home .site-navigation a {
   color: #ffffff;
 }
@@ -89,7 +85,6 @@ a {
 /* ===================================
    HEADER & NAVIGATION 
    =================================== */
-
 .site-header {
   position: static;
   display: flex;
@@ -97,28 +92,27 @@ a {
   align-items: center;
   padding: 1.1rem 2rem;
   z-index: 1000;
-
   background-color: white;
   border-bottom: 0.17rem solid #03233a;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .site-name {
   display: block;
   width: 3rem;
+  transition: opacity 0.3s ease;
 }
 
 .site-name:hover {
+  opacity: 0.8;
 }
 
-/* Navigation */
 .site-navigation a {
   font-family: "Bebas Neue", sans-serif;
   letter-spacing: 0.1rem;
   font-size: 1.3rem;
   font-weight: 700;
   color: #03233a;
-  transition: color 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .site-navigation a:hover {
@@ -128,26 +122,63 @@ a {
 .site-navigation ul {
   list-style: none;
   display: none;
+  margin: 0;
+  padding: 0;
+}
+.site-navigation.toggled {
+  fill: #ffffff;
 }
 
 .site-navigation.toggled ul {
-  display: block;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(3, 35, 58, 0.952);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  z-index: 999;
+}
+
+.site-navigation.toggled ul li a {
+  font-size: 2.5rem;
+  color: white;
 }
 
 .menu-toggle {
   background-color: transparent;
   border: 0;
   cursor: pointer;
+  z-index: 1001;
+  position: relative;
 }
+
 @media screen and (min-width: 50rem) {
   .menu-toggle {
     display: none;
   }
+
   .site-navigation ul {
     display: flex;
+    flex-direction: row;
     gap: 2rem;
   }
+
+  .site-navigation.toggled ul {
+    position: static;
+    background-color: transparent;
+  }
+
+  .site-navigation.toggled ul li a {
+    font-size: 1.3rem;
+    color: #03233a;
+  }
 }
+
 /* ===================================
    HOME PAGE - Hero
    =================================== */
@@ -172,7 +203,7 @@ a {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(3, 25, 58, 0.75);
+  background-color: rgba(3, 25, 58, 0.753);
   z-index: 1;
   pointer-events: none;
 }
