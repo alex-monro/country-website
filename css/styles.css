@@ -4,7 +4,7 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
-  color: #01003d;
+  color: #03233a;
 }
 
 /* ===================================
@@ -17,31 +17,40 @@ h3,
 h4,
 h5,
 h6 {
-  color: #01003d;
+  color: #03233a;
 }
 
 h1 {
   font-family: "Bebas Neue", sans-serif;
   font-size: 5rem;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.3rem;
   color: white;
 }
 
 h2,
-h3 {
+h3,
+legend {
   font-family: "Bebas Neue", sans-serif;
   font-size: 2rem;
-  letter-spacing: 0.3rem;
-  color: #01003d;
+  letter-spacing: 0.1rem;
+  color: #03233a;
 }
-
+h3 {
+  letter-spacing: 0.15rem;
+}
+h2 {
+  letter-spacing: 0.2rem;
+}
 /* ===================================
    LINKS
    =================================== */
 
 a {
   text-decoration: none;
-  color: var(--color-primary);
+  color: #03233a;
+}
+.skip-link {
+  display: none;
 }
 
 /* ===================================
@@ -52,36 +61,73 @@ a {
   max-width: 120rem;
   margin: 0 auto;
 }
-
 /* ===================================
-   HEADER & NAVIGATION
+   HEADER & NAVIGATION - HOME PAGE ONLY
    =================================== */
 
-.site-header {
+.home .site-header {
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
+  background-color: transparent;
+  border-bottom: none;
+}
+
+.home .site-name {
+  color: #ffffff;
+}
+
+.home .site-navigation a {
+  color: #ffffff;
+}
+
+.home .menu-toggle svg {
+  fill: #ffffff;
+}
+
+/* ===================================
+   HEADER & NAVIGATION 
+   =================================== */
+
+.site-header {
+  position: static;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 2rem;
+  padding: 1.1rem 2rem;
   z-index: 1000;
-  background-color: #ffffff;
-  border-bottom: solid 0.1875rem #01003d;
+
+  background-color: white;
+  border-bottom: 0.17rem solid #03233a;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .site-name {
-  font-size: 1.5rem;
-  font-weight: 700;
+  display: block;
+  width: 3rem;
+}
+
+.site-name:hover {
 }
 
 /* Navigation */
+.site-navigation a {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.1rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #03233a;
+  transition: color 0.3s ease;
+}
+
+.site-navigation a:hover {
+  opacity: 0.8;
+}
+
 .site-navigation ul {
   list-style: none;
   display: none;
-}
-
-.site-navigation a {
 }
 
 .site-navigation.toggled ul {
@@ -93,41 +139,42 @@ a {
   border: 0;
   cursor: pointer;
 }
-
-.menu-toggle svg {
-  fill: var(--color-white);
-}
-
 @media screen and (min-width: 50rem) {
   .menu-toggle {
     display: none;
   }
-
   .site-navigation ul {
     display: flex;
     gap: 2rem;
   }
 }
-
 /* ===================================
    HOME PAGE - Hero
    =================================== */
 
 .hero {
+  position: relative;
   align-items: center;
   justify-content: center;
 }
 
-.hero {
-  height: 100vh;
-}
-
 .hero img {
-  position: relative;
   display: block;
   height: 100vh;
   width: 100vw;
   object-fit: cover;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(3, 25, 58, 0.75);
+  z-index: 1;
+  pointer-events: none;
 }
 
 .hero h1 {
@@ -135,65 +182,137 @@ a {
   text-align: center;
   top: 40%;
   width: 100%;
+  z-index: 2;
+}
+.scroll-arrow {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 2rem;
+  width: 3rem;
+  margin: 0 auto;
+  z-index: 2;
+  color: white;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+  transition: opacity 0.3s ease;
 }
 
+@media (min-width: 50rem) {
+  .hero h1 {
+    font-size: 8rem;
+    top: 30%;
+  }
+}
 /* ===================================
-   HOME PAGE - Card Section
+   HOME PAGE - NEWSLETTER SECTION
    =================================== */
 
-.card-section {
+.newsletter {
+  max-width: 30rem;
+  padding: 2rem 2rem 4rem;
+  margin: 0 auto;
   text-align: center;
-  padding: 2rem;
 }
 
-.card-container {
-  display: grid;
-  gap: 2rem;
-  padding: 2rem;
-  justify-content: center;
+.newsletter legend {
+  text-align: center;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: #03233a;
 }
 
-.card-container {
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 25rem));
-}
-.card-container a {
-  border-radius: 0.2rem;
-  overflow: hidden;
-  display: block;
-}
-.card-container img {
-  display: block;
-  object-fit: cover;
-}
-
-.card-container h3 {
-  padding: 2rem;
+.newsletter-form fieldset {
+  border: none;
+  padding: 1rem;
   margin: 0;
-  color: #d4e6ee;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.newsletter-form .form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.newsletter-form label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.25rem;
+  font-size: 1.1rem;
+  color: #03233a;
+  font-weight: 600;
+}
+
+.newsletter-form input {
+  padding: 0.75rem;
+  border: 0.15rem solid #03233a;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.newsletter-form button {
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  color: white;
   background-color: #03233a;
+  border: 0.15rem solid #03233a;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: white;
+  color: #03233a;
 }
 
 /* ===================================
-    Page Hero -- ALL SECTIONS
+   PAGE HERO - ALL SECTIONS
    =================================== */
 
 .page-hero {
   position: relative;
-  height: 30vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #d4e6ee;
+  height: 50vh;
+}
+
+.page-hero img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Dark overlay for text readability */
+.page-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(3, 25, 58, 0.75);
+  z-index: 1;
 }
 
 .page-hero h2 {
   position: absolute;
-  z-index: 100;
-  font-size: 2.5rem;
+  text-align: center;
+  top: 30%;
+  width: 100%;
+  z-index: 2;
+  font-size: 4rem;
+  color: #ffffff;
 }
 
 /* ===================================
-   CONTENT SECTION - MOBILE FIRST (Wildlife & Geography)
+   CONTENT SECTION (Wildlife & Geography)
    =================================== */
 
 .content-section {
@@ -202,6 +321,10 @@ a {
   margin: 0 auto;
   display: grid;
   gap: 5rem;
+}
+
+.content-section h3 {
+  text-align: center;
 }
 
 .featured-wrapper {
@@ -216,10 +339,6 @@ a {
   width: 100%;
   height: 17.5rem;
   object-fit: cover;
-  display: block;
-}
-
-.featured-text {
 }
 
 .featured-text h3 {
@@ -231,7 +350,7 @@ a {
 .featured-text p {
   font-size: 1rem;
   line-height: 1.7;
-  color: #01003d;
+  color: #03233a;
 }
 
 .content-card {
@@ -241,7 +360,6 @@ a {
 
 .content-card img {
   width: 100%;
-  height: 17.5rem;
   object-fit: cover;
   display: block;
 }
@@ -255,32 +373,20 @@ a {
   line-height: 1.7;
 }
 
-/* ===================================
-   CONTENT SECTION - DESKTOP
-   =================================== */
-
-@media screen and (min-width: 48rem) {
-  .page-hero h2 {
-    font-size: 4rem;
-  }
-
+@media screen and (min-width: 50rem) {
   .content-section {
     gap: 3rem;
   }
 
   .featured-wrapper {
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1fr 1.5fr;
     gap: 3rem;
     align-items: center;
   }
 
   .featured-wrapper video,
   .featured-wrapper img {
-    height: 21.875rem;
-  }
-
-  .featured-text h3 {
-    font-size: 3rem;
+    height: 21rem;
   }
 
   .featured-text p {
@@ -292,7 +398,7 @@ a {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
-    direction: rtl;
+    direction: ltr;
   }
 
   .content-card > * {
@@ -300,7 +406,7 @@ a {
   }
 
   .content-card.reverse {
-    direction: ltr;
+    direction: rtl;
   }
 
   .content-card img {
@@ -310,41 +416,43 @@ a {
   .content-card h3 {
     font-size: 2.5rem;
   }
+
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* ===================================
+   CONTENT SECTION - GEORGRAPHY ONLY - REVERSE ORDER
+   =================================== */
+  .geography .featured-wrapper {
+    direction: rtl;
+  }
+  .featured-wrapper > * {
+    direction: ltr;
+  }
+  .geography .content-card {
+    direction: rtl;
+  }
+
+  .geography .content-card.reverse {
+    direction: ltr;
+  }
 }
 
 /* ===================================
    CREDITS PAGE - TABLE
    =================================== */
 
-.credits-intro,
-.credits-footer {
-  text-align: left;
-  max-width: 75rem;
-  margin: 0 auto 3rem;
-}
-
-.credits-intro h3,
-.credits-footer h3 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.credits-intro p,
-.credits-footer p {
-  font-size: 1rem;
-  line-height: 1.7;
-}
-
 .credits-table {
   width: 100%;
-  max-width: 75rem;
+  max-width: 40rem;
   margin: 0 auto 3rem;
   border-collapse: collapse;
   text-align: left;
 }
 
 .credits-table thead {
-  background-color: #01003d;
+  background-color: #03233a;
   color: #ffffff;
 }
 
@@ -355,7 +463,6 @@ a {
 }
 
 .credits-table th {
-  font-family: "Bebas Neue", sans-serif;
   font-size: 1.2rem;
   letter-spacing: 0.1rem;
 }
@@ -366,12 +473,12 @@ a {
 }
 
 .credits-table a {
-  color: #01003d;
+  color: #03233a;
   text-decoration: underline;
 }
 
 .credits-table a:hover {
-  color: #03233a;
+  color: #000000;
 }
 
 /* ===================================
@@ -382,5 +489,6 @@ a {
   background-color: #03233a;
   color: #f6fbfc;
   text-align: center;
-  padding: 3rem;
+  padding: 2rem;
+  font-size: 0.8rem;
 }

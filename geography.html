@@ -9,6 +9,22 @@
       content="Explore the frozen continent of Antarctica - its geography, ice sheets, and extreme climate."
     />
 
+    <!-- favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,7 +45,10 @@
   <body class="geography">
     <div class="site-wrapper">
       <header class="site-header">
-        <a href="index.html" class="site-name">ANTARCTICA</a>
+        
+        <a href="index.html" class="site-name">
+          <img src="images/logo/logo-blue-white.svg" alt="Antarctica Logo" />
+        </a>
 
         <nav class="site-navigation" id="site-navigation">
           <button
@@ -54,7 +73,6 @@
           <ul class="nav-menu" id="header-menu">
             <li><a href="wildlife.html">Wildlife</a></li>
             <li><a href="geography.html">Geography</a></li>
-            <li><a href="research.html">Research</a></li>
             <li><a href="credits.html">Credits</a></li>
           </ul>
         </nav>
@@ -62,13 +80,14 @@
 
       <main>
         <section class="page-hero">
-          <h2>Geography of Antarctica</h2>
+          <h2>GEOGRAPHY</h2>
+          <img src="images/frozen-continent.jpg" alt="" />
         </section>
 
         <section class="content-section">
           <!-- Featured wrapper -->
           <div class="featured-wrapper">
-            <img src="images/frozen-continent.jpg" alt="Antarctic landscape" />
+           
             <div class="featured-text">
               <h3>The Frozen Continent</h3>
               <p>
@@ -77,19 +96,19 @@
                 entirely covered by ice sheets up to 4.8 kilometers thick, it
                 contains 90% of the world's ice and 70% of its fresh water.
               </p>
-              <blockquote cite="https://example.com">
-                <p>
-                  "Antarctica is a natural reserve, devoted to peace and
-                  science."
-                </p>
-                <footer>— Antarctic Treaty, 1959</footer>
+            <blockquote cite="https://www.ats.aq/e/protocol.html">
+              <p> "Antarctica is a natural reserve, devoted to peace and science."</p>
+              <footer>— Protocol on Environmental Protection to the Antarctic Treaty, Article 2 (1991)</footer>
+            </blockquote>
               </blockquote>
             </div>
+
+             <img src="images/extreme-climates.jpg" alt="Antarctic landscape" />
           </div>
 
           <!-- Ice Sheets card -->
           <article class="content-card">
-            <img src="images/glaciers.jpg" alt="Ice sheets and glaciers" />
+            <img src="images/page-header.jpg" alt="Ice sheets and glaciers" />
             <div>
               <h3>Ice Sheets and Glaciers</h3>
               <p>
@@ -105,7 +124,7 @@
           <!-- Climate card -->
           <article class="content-card reverse">
             <img
-              src="images/extreme-climates.jpg"
+              src="images/landscape.jpg"
               alt="Extreme Antarctic climate"
             />
             <div>

@@ -9,6 +9,22 @@
       content="Explore the frozen continent of Antarctica - its wildlife, geography, and scientific research."
     />
 
+    <!-- favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,7 +45,9 @@
   <body class="wildlife">
     <div class="site-wrapper">
       <header class="site-header">
-        <a href="index.html" class="site-name">ANTARCTICA</a>
+        <a href="index.html" class="site-name">
+          <img src="images/logo/logo-blue-white.svg" alt="Antarctica Logo" />
+        </a>
 
         <nav class="site-navigation" id="site-navigation">
           <button
@@ -54,23 +72,19 @@
           <ul class="nav-menu" id="header-menu">
             <li><a href="wildlife.html">Wildlife</a></li>
             <li><a href="geography.html">Geography</a></li>
-            <li><a href="research.html">Research</a></li>
             <li><a href="credits.html">Credits</a></li>
           </ul>
         </nav>
       </header>
-
       <main>
         <section class="page-hero">
-          <h2>Antarctic Wildlife</h2>
+          <h2>Wildlife</h2>
+          <img src="images/frozen-continent.jpg" alt="" />
         </section>
 
         <section class="content-section">
           <!-- Featured wrapper -->
           <div class="featured-wrapper">
-            <video autoplay muted loop playsinline>
-              <source src="videos/wildlife.mp4" type="video/mp4" />
-            </video>
             <div class="featured-text">
               <h3>Life on the Ice</h3>
               <p>
@@ -80,6 +94,9 @@
                 creatures thrive where few others can.
               </p>
             </div>
+            <video autoplay muted loop playsinline>
+              <source src="videos/wildlife.mp4" type="video/mp4" />
+            </video>
           </div>
 
           <!-- Penguin card -->

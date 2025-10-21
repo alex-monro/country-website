@@ -10,6 +10,20 @@
     />
 
     <!-- favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -34,7 +48,13 @@
   <body class="home">
     <div class="site-wrapper">
       <header class="site-header">
-        <a href="index.html" class="site-name">ANTARCTICA</a>
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+        <a href="index.html" class="site-name">
+          <img
+            src="images/logo/logo-white-transparent.svg"
+            alt="Antarctica Logo"
+          />
+        </a>
 
         <nav class="site-navigation" id="site-navigation">
           <button
@@ -59,41 +79,67 @@
           <ul class="nav-menu" id="header-menu">
             <li><a href="wildlife.html">Wildlife</a></li>
             <li><a href="geography.html">Geography</a></li>
-            <li><a href="research.html">Research</a></li>
             <li><a href="credits.html">Credits</a></li>
           </ul>
         </nav>
       </header>
-
       <main>
         <section class="hero">
-          <video class="hero-video" autoplay muted loop playsinline>
-            <source src="videos/hero.mp4" />
-            Your browser does not support the video tag.
-          </video>
+          <img src="images/frozen-continent.jpg" alt="" />
 
           <h1 class="hero-title">Antarctica</h1>
+          <a href="#newsletter" class="scroll-indicator">
+            <svg
+              class="scroll-arrow"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+                fill="currentColor"
+              />
+              <path
+                d="M12 8v8M8 12l4 4 4-4"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
         </section>
 
-        <!-- Cards section -->
-        <section class="card-section">
-          <h2>Explore the Continent</h2>
-          <div class="card-container">
-            <a href="wildlife.html" class="explore-card" id="wildlife-card">
-              <h3>Wildlife</h3>
-              <img src="images/wildlife.jpg" alt="Antarctic wildlife" />
-            </a>
-
-            <a href="geography.html" class="explore-card" id="geography-card">
-              <h3>Geography</h3>
-              <img src="images/geography.jpg" alt="Antarctic geography" />
-            </a>
-
-            <a href="research.html" class="explore-card" id="research-card">
-              <h3>Research</h3>
-              <img src="images/research.jpg" alt="Antarctic research" />
-            </a>
-          </div>
+        <!-- Newsletter section -->
+        <section class="newsletter" id="newsletter">
+          <form class="newsletter-form">
+            <fieldset>
+              <legend>Stay Updated</legend>
+              <div class="form-row">
+                <div>
+                  <label for="name">Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Your Email"
+                    required
+                  />
+                </div>
+              </div>
+              <button type="submit">Subscribe to Newsletter</button>
+            </fieldset>
+          </form>
         </section>
 
         <footer class="site-footer">
