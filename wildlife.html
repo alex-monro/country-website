@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wildlife - Antarctica</title>
+    <!-- Description for SEO purposes -->
     <meta
       name="description"
-      content="Explore the frozen continent of Antarctica - its wildlife, geography, and scientific research."
+      content="Explore Antarctica's incredible wildlife — penguins, seals, whales, and more surviving in Earth's harshest environment."
     />
 
     <!-- favicon -->
@@ -25,6 +26,7 @@
     />
     <link rel="manifest" href="/favicon/site.webmanifest" />
 
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -36,17 +38,25 @@
       rel="stylesheet"
     />
 
+    <!-- CSS -->
     <link rel="stylesheet" href="css/normalize-fwd.css" />
     <link rel="stylesheet" href="css/styles.css" />
 
+    <!-- Script -->
     <script src="scripts/navigation.js" defer></script>
   </head>
 
   <body class="wildlife">
+    <!-- Skip link for accesibiliity -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <div class="site-wrapper">
       <header class="site-header">
         <a href="index.html" class="site-name">
-          <img src="images/logo/logo-blue-white.svg" alt="Antarctica Logo" />
+          <img
+            src="images/logo/logo-blue-white.svg"
+            alt="Antarctica logo showing a stylized outline of the continent"
+          />
         </a>
 
         <nav class="site-navigation" id="site-navigation">
@@ -76,17 +86,20 @@
           </ul>
         </nav>
       </header>
-      <main>
+      <!-- Page Header -->
+      <main id="main-content">
         <section class="page-hero">
-          <h2>Wildlife</h2>
-          <img src="images/frozen-continent.jpg" alt="" />
+          <h1>Wildlife</h1>
+          <img
+            src="images/frozen-continent.jpg"
+            alt="Snowy landscape of Antarctica with icy mountains"
+          />
         </section>
-
+        <!-- Content -->
         <section class="content-section">
-          <!-- Featured wrapper -->
           <div class="featured-wrapper">
             <div class="featured-text">
-              <h3>Life on the Ice</h3>
+              <h2>Life on the Ice</h2>
               <p>
                 Antarctica's wildlife has evolved remarkable adaptations to
                 survive in one of Earth's most extreme environments. From the
@@ -94,14 +107,22 @@
                 creatures thrive where few others can.
               </p>
             </div>
-            <video autoplay muted loop playsinline>
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              poster="images/wildlife-preview.jpg"
+            >
               <source src="videos/wildlife.mp4" type="video/mp4" />
             </video>
           </div>
 
-          <!-- Penguin card -->
           <article class="content-card">
-            <img src="images/penguins.jpg" alt="Emperor Penguins" />
+            <img
+              src="images/penguins.jpg"
+              alt="Penguin swimming in icy water"
+            />
             <div>
               <h3>Penguins</h3>
               <p>
@@ -113,9 +134,8 @@
             </div>
           </article>
 
-          <!-- Seal card -->
           <article class="content-card reverse">
-            <img src="images/seals.jpg" alt="Weddell Seals" />
+            <img src="images/seals.jpg" alt="Weddell seal close up" />
             <div>
               <h3>Seals</h3>
               <p>
@@ -127,9 +147,11 @@
             </div>
           </article>
 
-          <!-- Whale card -->
           <article class="content-card">
-            <img src="images/whales.jpg" alt="Humpback Whales" />
+            <img
+              src="images/whales.jpg"
+              alt="Humpback whale surfacing in Antarctic waters"
+            />
             <div>
               <h3>Whales</h3>
               <p>
@@ -141,11 +163,11 @@
             </div>
           </article>
         </section>
-
-        <footer class="site-footer">
-          <p>&copy; 2025 Antarctica. For Educational Purposes Only.</p>
-        </footer>
       </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Antarctica. For Educational Purposes Only.</p>
+      </footer>
     </div>
   </body>
 </html>

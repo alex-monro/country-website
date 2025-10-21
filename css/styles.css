@@ -2,45 +2,41 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ===================================
+   TYPOGRAPHY
+   =================================== */
+
 body {
   font-family: "Roboto", sans-serif;
   color: #03233a;
 }
-
-/* ===================================
-   TYPOGRAPHY
-   =================================== */
 
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+legend {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
   color: #03233a;
 }
 
 h1 {
-  font-family: "Bebas Neue", sans-serif;
   font-size: 5rem;
   letter-spacing: 0.3rem;
   color: white;
 }
 
-h2,
-h3,
-legend {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 2rem;
-  letter-spacing: 0.1rem;
-  color: #03233a;
-}
-h3 {
-  letter-spacing: 0.15rem;
-}
 h2 {
   letter-spacing: 0.2rem;
 }
+
+h3 {
+  letter-spacing: 0.15rem;
+}
+
 /* ===================================
    LINKS
    =================================== */
@@ -49,8 +45,21 @@ a {
   text-decoration: none;
   color: #03233a;
 }
+
 .skip-link {
-  display: none;
+  position: absolute;
+  transform: translateX(-200%);
+  background-color: #ffffff;
+}
+
+.skip-link:focus {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  transform: none;
+  padding: 0.5rem 1rem;
+  border: 0.15rem solid #03233a;
+  z-index: 2000;
 }
 
 /* ===================================
@@ -61,30 +70,11 @@ a {
   max-width: 120rem;
   margin: 0 auto;
 }
-/* ===================================
-   HEADER & NAVIGATION - HOME PAGE ONLY
-   =================================== */
-
-.home .site-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: transparent;
-  border-bottom: none;
-}
-
-.home .site-navigation a {
-  color: #ffffff;
-}
-
-.home .menu-toggle svg {
-  fill: #ffffff;
-}
 
 /* ===================================
    HEADER & NAVIGATION 
    =================================== */
+
 .site-header {
   position: static;
   display: flex;
@@ -125,9 +115,6 @@ a {
   margin: 0;
   padding: 0;
 }
-.site-navigation.toggled {
-  fill: #ffffff;
-}
 
 .site-navigation.toggled ul {
   display: flex;
@@ -149,6 +136,10 @@ a {
   color: white;
 }
 
+.site-navigation.toggled svg {
+  fill: #ffffff;
+}
+
 .menu-toggle {
   background-color: transparent;
   border: 0;
@@ -157,7 +148,7 @@ a {
   position: relative;
 }
 
-@media screen and (min-width: 50rem) {
+@media screen and (min-width: 50em) {
   .menu-toggle {
     display: none;
   }
@@ -167,20 +158,31 @@ a {
     flex-direction: row;
     gap: 2rem;
   }
-
-  .site-navigation.toggled ul {
-    position: static;
-    background-color: transparent;
-  }
-
-  .site-navigation.toggled ul li a {
-    font-size: 1.3rem;
-    color: #03233a;
-  }
 }
 
 /* ===================================
-   HOME PAGE - Hero
+   HEADER & NAVIGATION - HOME PAGE ONLY
+   =================================== */
+
+.home .site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  border-bottom: none;
+}
+
+.home .site-navigation a {
+  color: #ffffff;
+}
+
+.home .menu-toggle svg {
+  fill: #ffffff;
+}
+
+/* ===================================
+   HOME PAGE - HERO
    =================================== */
 
 .hero {
@@ -215,6 +217,7 @@ a {
   width: 100%;
   z-index: 2;
 }
+
 .scroll-arrow {
   position: absolute;
   right: 0;
@@ -224,17 +227,15 @@ a {
   margin: 0 auto;
   z-index: 2;
   color: white;
-  cursor: pointer;
-  animation: bounce 2s infinite;
-  transition: opacity 0.3s ease;
 }
 
-@media (min-width: 50rem) {
+@media (min-width: 50em) {
   .hero h1 {
     font-size: 8rem;
     top: 30%;
   }
 }
+
 /* ===================================
    HOME PAGE - NEWSLETTER SECTION
    =================================== */
@@ -317,10 +318,9 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 0;
+  z-index: auto;
 }
 
-/* Dark overlay for text readability */
 .page-hero::before {
   content: "";
   position: absolute;
@@ -332,7 +332,7 @@ a {
   z-index: 1;
 }
 
-.page-hero h2 {
+.page-hero h1 {
   position: absolute;
   text-align: center;
   top: 30%;
@@ -372,7 +372,7 @@ a {
   object-fit: cover;
 }
 
-.featured-text h3 {
+.content-section h2 {
   margin: 0 0 1rem;
   font-size: 2.5rem;
   padding-bottom: 1rem;
@@ -395,16 +395,12 @@ a {
   display: block;
 }
 
-.content-card h3 {
-  font-size: 2rem;
-}
-
 .content-card p {
   font-size: 1rem;
   line-height: 1.7;
 }
 
-@media screen and (min-width: 50rem) {
+@media screen and (min-width: 50em) {
   .content-section {
     gap: 3rem;
   }
@@ -452,15 +448,14 @@ a {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  /* ===================================
-   CONTENT SECTION - GEORGRAPHY ONLY - REVERSE ORDER
-   =================================== */
   .geography .featured-wrapper {
     direction: rtl;
   }
+
   .featured-wrapper > * {
     direction: ltr;
   }
+
   .geography .content-card {
     direction: rtl;
   }
@@ -471,8 +466,14 @@ a {
 }
 
 /* ===================================
-   CREDITS PAGE - TABLE
+   CREDITS PAGE CONENT
    =================================== */
+
+.credits h1 {
+  color: #03233a;
+  text-align: center;
+  font-size: 2rem;
+}
 
 .credits-table {
   width: 100%;

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Geography - Antarctica</title>
+    <!-- Description for SEO purposes -->
     <meta
       name="description"
       content="Explore the frozen continent of Antarctica - its geography, ice sheets, and extreme climate."
@@ -25,6 +26,7 @@
     />
     <link rel="manifest" href="/favicon/site.webmanifest" />
 
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -36,18 +38,25 @@
       rel="stylesheet"
     />
 
+    <!-- CSS -->
     <link rel="stylesheet" href="css/normalize-fwd.css" />
     <link rel="stylesheet" href="css/styles.css" />
 
+    <!-- Script -->
     <script src="scripts/navigation.js" defer></script>
   </head>
 
   <body class="geography">
+    <!-- Skip link for accesibiliity -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <div class="site-wrapper">
       <header class="site-header">
-        
         <a href="index.html" class="site-name">
-          <img src="images/logo/logo-blue-white.svg" alt="Antarctica Logo" />
+          <img
+            src="images/logo/logo-blue-white.svg"
+            alt="Antarctica logo showing a stylized outline of the continent"
+          />
         </a>
 
         <nav class="site-navigation" id="site-navigation">
@@ -78,35 +87,41 @@
         </nav>
       </header>
 
-      <main>
+      <main id="main-content">
+        <!-- Hero -->
         <section class="page-hero">
-          <h2>GEOGRAPHY</h2>
-          <img src="images/frozen-continent.jpg" alt="" />
+          <h1>Geography</h1>
+          <img
+            src="images/frozen-continent.jpg"
+            alt="Snowy Antarctic landscape"
+          />
         </section>
-
+        <!-- Content -->
         <section class="content-section">
-          <!-- Featured wrapper -->
           <div class="featured-wrapper">
-           
             <div class="featured-text">
-              <h3>The Frozen Continent</h3>
+              <h2>The Frozen Continent</h2>
               <p>
                 Antarctica is Earth's southernmost continent, a vast frozen
                 wilderness covering 14 million square kilometers. Almost
                 entirely covered by ice sheets up to 4.8 kilometers thick, it
                 contains 90% of the world's ice and 70% of its fresh water.
               </p>
-            <blockquote cite="https://www.ats.aq/e/protocol.html">
-              <p> "Antarctica is a natural reserve, devoted to peace and science."</p>
-              <footer>— Protocol on Environmental Protection to the Antarctic Treaty, Article 2 (1991)</footer>
-            </blockquote>
+
+              <blockquote cite="https://www.ats.aq/e/protocol.html">
+                <p>
+                  "Antarctica is a natural reserve, devoted to peace and
+                  science."
+                </p>
+                <footer>
+                  — Protocol on Environmental Protection to the Antarctic
+                  Treaty, Article 2 (1991)
+                </footer>
               </blockquote>
             </div>
-
-             <img src="images/landscape.jpg" alt="Antarctic landscape" />
+            <img src="images/landscape.jpg" alt="Antarctic landscape" />
           </div>
 
-          <!-- Ice Sheets card -->
           <article class="content-card">
             <img src="images/glaciers.jpg" alt="Ice sheets and glaciers" />
             <div>
@@ -121,7 +136,6 @@
             </div>
           </article>
 
-          <!-- Climate card -->
           <article class="content-card reverse">
             <img
               src="images/extreme-climates.jpg"
@@ -138,7 +152,6 @@
             </div>
           </article>
 
-          <!-- Mountains card -->
           <article class="content-card">
             <img src="images/mountains.jpg" alt="Antarctic mountains" />
             <div>
@@ -153,11 +166,11 @@
             </div>
           </article>
         </section>
-
-        <footer class="site-footer">
-          <p>&copy; 2025 Antarctica. For Educational Purposes Only.</p>
-        </footer>
       </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Antarctica. For Educational Purposes Only.</p>
+      </footer>
     </div>
   </body>
 </html>
